@@ -1,35 +1,67 @@
 import React, { useState, useEffect } from 'react';
-import { Code, Book, Briefcase, FileText, Globe } from 'lucide-react';
+import { Code, Book, Briefcase, FileText, Globe, Award } from 'lucide-react';
 
 // Mock Data with more detailed information
 const initialPortfolioData = {
   profile: {
-    name: 'Alex Rodriguez',
-    title: 'AI Engineer | Machine Learning Specialist',
+    name: 'Darshan Tank',
+    title: 'NLP Engineer | Machine Learning Specialist',
     bio: 'Passionate AI engineer with expertise in machine learning, deep learning, and innovative tech solutions. Committed to solving complex problems through intelligent systems.',
     contact: {
-      email: 'alex.rodriguez@email.com',
-      linkedin: 'https://linkedin.com/in/alexrodriguez',
-      github: 'https://github.com/alexrodriguez'
+      email: 'tankdarshan2022@gmail.com',
+      linkedin: '',
+      github: 'https://github.com/Darshan2104',
+      twitter:'',
+      leetcode:''
     }
   },
   skills: [
-    'Machine Learning', 'Deep Learning', 'Python', 'TensorFlow',
-    'PyTorch', 'Natural Language Processing', 'Computer Vision',
-    'Docker', 'Kubernetes'
+    'Machine Learning', 'Deep Learning', 'Python', 'Pytorch',
+    'Natural Language Processing',
+    'Docker', 'Kubernetes', 'Linux'
   ],
   education: [
     {
-      degree: 'Master in Artificial Intelligence',
-      institution: 'Stanford University',
+      degree: 'Bachelor of Engineering in Computer Science',
+      institution: 'Dharmsinh Desai University',
       year: '2022',
       highlights: [
-        'Thesis on Transformer Architectures',
-        'GPA: 3.9/4.0',
+        'Thesis on Abstractive Text Summarization',
+        'GPA: 8.05/10',
         'Research Assistant in AI Lab'
       ]
     }
   ],
+  workExperience: [
+    {
+      company: 'TechInnovate Solutions',
+      position: 'Machine Learning Engineer',
+      duration: 'Jan 2023 - Present',
+      responsibilities: [
+        'Developed advanced NLP models for text analysis',
+        'Implemented scalable machine learning pipelines',
+        'Collaborated with cross-functional teams to deliver AI solutions'
+      ]
+    }
+  ],
+  openSourceContributions: [
+    {
+      project: 'Hugging Face Transformers',
+      contribution: 'Added support for multilingual sentiment analysis',
+      link: 'https://github.com/huggingface/transformers'
+    },
+    {
+      project: 'scikit-learn',
+      contribution: 'Improved documentation for clustering algorithms',
+      link: 'https://github.com/scikit-learn/scikit-learn'
+    }
+  ],
+  competitiveCoding: {
+    platforms: [
+      { name: 'LeetCode', rank: '1200', badge: 'Knight' },
+      { name: 'CodeChef', rating: '1800', badge: 'Three Star' }
+    ]
+  },
   projects: [
     {
       name: 'AI-Powered Recommendation System',
@@ -96,18 +128,101 @@ const AIEngineerPortfolio = () => {
       case 'home':
         return (
           <div className="min-h-screen flex flex-col justify-center items-center text-center p-4 bg-gradient-to-br from-blue-50 to-blue-100">
-            <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-2xl w-full">
-              <h1 className="text-4xl font-bold mb-4 text-blue-800">{portfolioData.profile.name}</h1>
-              <h2 className="text-2xl mb-4 text-blue-600">{portfolioData.profile.title}</h2>
-              <p className="text-gray-700 mb-6 min-h-[100px]">{displayBio}</p>
-              <div className="flex justify-center space-x-4">
-                <a href={portfolioData.profile.contact.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">LinkedIn</a>
-                <a href={portfolioData.profile.contact.github} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">GitHub</a>
+            <div className="bg-white shadow-2xl rounded-2xl p-8 max-w-4xl w-full space-y-6">
+              <div>
+                <h1 className="text-4xl font-bold mb-4 text-blue-800">{portfolioData.profile.name}</h1>
+                <h2 className="text-2xl mb-4 text-blue-600">{portfolioData.profile.title}</h2>
+                <p className="text-gray-700 mb-6 min-h-[100px]">{displayBio}</p>
+                <div className="flex justify-center space-x-4 mb-6">
+                  <a href={portfolioData.profile.contact.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">LinkedIn</a>
+                  <a href={portfolioData.profile.contact.github} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">GitHub</a>
+                  <a href={portfolioData.profile.contact.twitter} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">X (Twitter)</a>
+                  <a href={portfolioData.profile.contact.leetcode} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">Leetcode</a>
+                </div>
+              </div>
+
+              {/* Technical Skills Section */}
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-800">Technical Skills</h3>
+                <div className="flex flex-wrap justify-center gap-4">
+                  {portfolioData.skills.map((skill, index) => (
+                    <div key={index} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-200 transition">{skill}</div>
+                  ))}
+                </div>
+              </div>
+
+              {/* Education Section */}
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-800">Education</h3>
+                {portfolioData.education.map((edu, index) => (
+                  <div key={index} className="mb-4">
+                    <h4 className="text-xl font-semibold text-blue-600">{edu.degree}</h4>
+                    <p className="text-gray-700">{edu.institution} | {edu.year}</p>
+                    <ul className="list-disc list-inside text-gray-600 mt-2">
+                      {edu.highlights.map((highlight, hIndex) => (
+                        <li key={hIndex}>{highlight}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              {/* Work Experience Section */}
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-800">Work Experience</h3>
+                {portfolioData.workExperience.map((job, index) => (
+                  <div key={index} className="mb-4">
+                    <h4 className="text-xl font-semibold text-blue-600">{job.position}</h4>
+                    <p className="text-gray-700">{job.company} | {job.duration}</p>
+                    <ul className="list-disc list-inside text-gray-600 mt-2">
+                      {job.responsibilities.map((resp, rIndex) => (
+                        <li key={rIndex}>{resp}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              {/* Open Source Contributions */}
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-800">Open Source Contributions</h3>
+                {portfolioData.openSourceContributions.map((contrib, index) => (
+                  <div key={index} className="mb-4 flex items-center justify-between">
+                    <div>
+                      <h4 className="text-xl font-semibold text-blue-600">{contrib.project}</h4>
+                      <p className="text-gray-700">{contrib.contribution}</p>
+                    </div>
+                    <a href={contrib.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                      View Contribution
+                    </a>
+                  </div>
+                ))}
+              </div>
+
+              {/* Competitive Coding Performance */}
+              <div className="bg-blue-50 rounded-xl p-6">
+                <h3 className="text-2xl font-semibold mb-4 text-blue-800">Competitive Coding</h3>
+                <div className="flex justify-around">
+                  {portfolioData.competitiveCoding.platforms.map((platform, index) => (
+                    <div key={index} className="text-center">
+                      <div className="bg-blue-100 rounded-full p-4 inline-block mb-2">
+                        <Award size={32} className="text-blue-600" />
+                      </div>
+                      <h4 className="text-xl font-semibold text-blue-600">{platform.name}</h4>
+                      <p className="text-gray-700">
+                        {platform.rank && `Rank: ${platform.rank}`}
+                        {platform.rating && `Rating: ${platform.rating}`}
+                      </p>
+                      <p className="text-blue-500 font-medium">{platform.badge}</p>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
           </div>
         );
       
+      // Rest of the code remains the same
       case 'projects':
         return (
           <div className="container mx-auto px-4 py-8">
@@ -133,18 +248,6 @@ const AIEngineerPortfolio = () => {
                     </div>
                   </div>
                 </div>
-              ))}
-            </div>
-          </div>
-        );
-
-      case 'skills':
-        return (
-          <div className="container mx-auto px-4 py-8">
-            <h2 className="text-3xl font-bold mb-8 text-center">Technical Skills</h2>
-            <div className="flex flex-wrap justify-center gap-4">
-              {portfolioData.skills.map((skill, index) => (
-                <div key={index} className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full hover:bg-blue-200 transition">{skill}</div>
               ))}
             </div>
           </div>
@@ -181,7 +284,6 @@ const AIEngineerPortfolio = () => {
         {[ 
           { icon: Globe, section: 'home', label: 'Home' },
           { icon: Code, section: 'projects', label: 'Projects' },
-          { icon: Book, section: 'skills', label: 'Skills' },
           { icon: FileText, section: 'blogs', label: 'Blogs' },
         ].map(({ icon: Icon, section, label }) => (
           <button key={section} onClick={() => setActiveSection(section)} 
