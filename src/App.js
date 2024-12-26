@@ -133,7 +133,6 @@ const AIEngineerPortfolio = () => {
                 <h1 className="text-4xl font-bold mb-4 text-blue-800">{portfolioData.profile.name}</h1>
                 <h2 className="text-2xl mb-4 text-blue-600">{portfolioData.profile.title}</h2>
                 <p className="text-gray-700 mb-6 min-h-[100px]">{displayBio}</p>
-                {/* Social Links */}
                 <div className="flex justify-center space-x-4 mb-6">
                   <a href={portfolioData.profile.contact.github} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">GitHub</a>
                   <a href={portfolioData.profile.contact.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">LinkedIn</a>
@@ -190,15 +189,17 @@ const AIEngineerPortfolio = () => {
               {/* Open Source Contributions */}
               <div className="bg-blue-50 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-800">Open Source Contributions</h3>
-                <div className="grid md:grid-cols-2 gap-6">
                   {portfolioData.openSourceContributions.map((contrib, index) => (
-                    <div key={index} className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+                  <div key={index} className="mb-4 flex items-center justify-between">
+                    <div>
                       <h4 className="text-xl font-semibold text-blue-600">{contrib.project}</h4>
                       <p className="text-gray-700">{contrib.contribution}</p>
-                      <a href={contrib.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mt-2 block">View Contribution</a>
                     </div>
-                  ))}
+                    <a href={contrib.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
+                      View Contribution
+                    </a>
                 </div>
+                ))}
               </div>
 
               {/* Competitive Coding Performance */}
@@ -223,6 +224,7 @@ const AIEngineerPortfolio = () => {
             </div>
           </div>
         );
+      
       // Rest of the code remains the same
       case 'projects':
         return (
