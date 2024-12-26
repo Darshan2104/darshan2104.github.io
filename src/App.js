@@ -133,11 +133,12 @@ const AIEngineerPortfolio = () => {
                 <h1 className="text-4xl font-bold mb-4 text-blue-800">{portfolioData.profile.name}</h1>
                 <h2 className="text-2xl mb-4 text-blue-600">{portfolioData.profile.title}</h2>
                 <p className="text-gray-700 mb-6 min-h-[100px]">{displayBio}</p>
+                {/* Social Links */}
                 <div className="flex justify-center space-x-4 mb-6">
-                  <a href={portfolioData.profile.contact.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white px-6 py-2 rounded-full hover:bg-blue-600 transition">LinkedIn</a>
-                  <a href={portfolioData.profile.contact.github} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">GitHub</a>
-                  <a href={portfolioData.profile.contact.twitter} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">X (Twitter)</a>
-                  <a href={portfolioData.profile.contact.leetcode} target="_blank" rel="noopener noreferrer" className="bg-gray-800 text-white px-6 py-2 rounded-full hover:bg-gray-900 transition">Leetcode</a>
+                  <a href={portfolioData.profile.contact.github} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">GitHub</a>
+                  <a href={portfolioData.profile.contact.linkedin} target="_blank" rel="noopener noreferrer" className="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition">LinkedIn</a>
+                  <a href={portfolioData.profile.contact.twitter} target="_blank" rel="noopener noreferrer" className="bg-black text-white px-6 py-2 rounded-full hover:bg-gray-800 transition">X (Twitter)</a>
+                  <a href={portfolioData.profile.contact.leetcode} target="_blank" rel="noopener noreferrer" className="bg-orange-500 text-white px-6 py-2 rounded-full hover:bg-orange-600 transition">LeetCode</a>
                 </div>
               </div>
 
@@ -167,36 +168,37 @@ const AIEngineerPortfolio = () => {
                 ))}
               </div>
 
-              {/* Work Experience Section */}
+              {/* Timeline for Work Experience */}
               <div className="bg-blue-50 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-800">Work Experience</h3>
-                {portfolioData.workExperience.map((job, index) => (
-                  <div key={index} className="mb-4">
-                    <h4 className="text-xl font-semibold text-blue-600">{job.position}</h4>
-                    <p className="text-gray-700">{job.company} | {job.duration}</p>
-                    <ul className="list-disc list-inside text-gray-600 mt-2">
-                      {job.responsibilities.map((resp, rIndex) => (
-                        <li key={rIndex}>{resp}</li>
-                      ))}
-                    </ul>
-                  </div>
-                ))}
+                <div className="relative border-l-2 border-blue-300">
+                  {portfolioData.workExperience.map((job, index) => (
+                    <div key={index} className="mb-6 ml-4">
+                      <div className="absolute w-3 h-3 bg-blue-500 rounded-full -left-1.5 border border-white"></div>
+                      <h4 className="text-xl font-semibold text-blue-600">{job.position}</h4>
+                      <p className="text-gray-700">{job.company} | {job.duration}</p>
+                      <ul className="list-disc list-inside text-gray-600 mt-2">
+                        {job.responsibilities.map((resp, rIndex) => (
+                          <li key={rIndex}>{resp}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  ))}
+                </div>
               </div>
 
               {/* Open Source Contributions */}
               <div className="bg-blue-50 rounded-xl p-6">
                 <h3 className="text-2xl font-semibold mb-4 text-blue-800">Open Source Contributions</h3>
-                {portfolioData.openSourceContributions.map((contrib, index) => (
-                  <div key={index} className="mb-4 flex items-center justify-between">
-                    <div>
+                <div className="grid md:grid-cols-2 gap-6">
+                  {portfolioData.openSourceContributions.map((contrib, index) => (
+                    <div key={index} className="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
                       <h4 className="text-xl font-semibold text-blue-600">{contrib.project}</h4>
                       <p className="text-gray-700">{contrib.contribution}</p>
+                      <a href={contrib.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline mt-2 block">View Contribution</a>
                     </div>
-                    <a href={contrib.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">
-                      View Contribution
-                    </a>
-                  </div>
-                ))}
+                  ))}
+                </div>
               </div>
 
               {/* Competitive Coding Performance */}
@@ -221,7 +223,6 @@ const AIEngineerPortfolio = () => {
             </div>
           </div>
         );
-      
       // Rest of the code remains the same
       case 'projects':
         return (
