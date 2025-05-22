@@ -5,6 +5,23 @@ import { Briefcase, Calendar, MapPin, TrendingUp, Users, Zap } from "lucide-reac
 export const WorkExperience = () => {
   const experiences = [
     {
+      title: "Consultant GenAI",
+      company: "Deloitte",
+      location: "Bengaluru, India",
+      period: "Feb 2025 - Current",
+      duration: "Working",
+      type: "Full-time",
+      description: "Built and deployed Agentic RAG Chatbot on Tourist Policy Documents",
+      achievements: [
+        "Designed and deployed Gen-AI RAG pipeline for real-time Conversation on Tourist Policy Documents",
+        "It helped with information retrieval and document summarization",
+        "It guides the user for drafting new policies and provides suggestions for improvement",
+        "It helped to compare different policies for better decision making",
+      ],
+      technologies: ["LlamaIndex", "GPT-4o", "Azure AI Search", "SQL"],
+      gradient: "from-purple-600 to-pink-600"
+    },
+    {
       title: "Senior NLP Engineer",
       company: "Gnani.ai",
       location: "Bengaluru, India",
@@ -49,7 +66,8 @@ export const WorkExperience = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-800 mb-4">
-            Work <span className="text-gradient">Experience</span>
+            Work Experience
+            {/* <span className="text-gradient">Experience</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-700 max-w-3xl mx-auto">

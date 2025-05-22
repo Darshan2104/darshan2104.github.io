@@ -23,7 +23,7 @@ export const SocialLinks = () => {
 
   const handleDownloadResume = () => {
     // Replace this URL with your actual resume file URL
-    const resumeUrl = "https://drive.google.com/file/d/1YuUWBOboEyf1O3LuO7polP2RB0r3JWdO/view?usp=sharing";
+    const resumeUrl = "https://drive.google.com/file/d/1FpxoHxiw-tU2o13SBXzOBSFA8kDhctCl/view?usp=sharing";
     window.open(resumeUrl, "_blank");
   };
 

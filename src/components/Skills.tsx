@@ -7,28 +7,28 @@ const skills = [
     icon: Code,
     description: "Python, C/C++, Flask, FastAPI, TensorFlow, PyTorch, Pandas, Numpy, nltk, Scikit-learn, Spacy, Transformers, Huggingface, Jupyter Notebook",
     color: "from-blue-500 to-cyan-500",
-    items: ["Python", "C/C++", "Flask", "FastAPI", "TensorFlow", "PyTorch"]
+    items: ["Python", "C/C++", "Flask", "FastAPI", "PyTorch"]
   },
   {
     title: "Machine Learning",
     icon: Brain,
-    description: "Deep Learning, Neural Networks, LLM, OpenAI, Groq, RAG, LangChain, LangGraph, Prompt Engineering, CrewAI, AutoGen, LangGraph",
+    description: "Deep Learning, Neural Networks, LLM, OpenAI, Groq, RAG, LangChain, LangGraph, LlamaIndex, Prompt Engineering, CrewAI, AutoGen",
     color: "from-purple-500 to-pink-500",
-    items: ["Deep Learning", "RAG", "Langchain", "LangGraph", "Prompt Engineering", "LangChain"]
+    items: ["Deep Learning", "Agentic RAG", "Langchain", "LangGraph", "LlamaIndex","Prompt Engineering"]
   },
   {
     title: "Data & Databases",
     icon: Database,
     description: "Pinecone, Qdrant, Redis, MongoDB, PostgreSQL, Vector Databases, Data Processing",
     color: "from-green-500 to-emerald-500",
-    items: ["Pinecone", "Qdrant", "Redis", "MongoDB", "PostgreSQL", "Vector DBs"]
+    items: ["Qdrant", "Redis", "MongoDB", "PostgreSQL"]
   },
   {
     title: "ML in Production",
     icon: Network,
-    description: "Docker, Jenkins, Kibana, RabbitMQ, Git, AWS S3, DevOps, CI/CD",
+    description: "Docker, Jenkins, Kibana, RabbitMQ, Git, Azure, AWS S3, DevOps, CI/CD",
     color: "from-orange-500 to-red-500",
-    items: ["Docker", "Jenkins", "Kibana", "RabbitMQ", "Git", "AWS S3"]
+    items: ["Docker", "Azure", "Jenkins", "RabbitMQ", "Git"]
   },
 ];
 
@@ -42,7 +42,8 @@ export const Skills = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-800 mb-4">
-            Technical <span className="text-gradient">Skills</span>
+            Technical Skills 
+            {/* <span className="text-gradient">Skills</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 dark:text-gray-700 max-w-3xl mx-auto">

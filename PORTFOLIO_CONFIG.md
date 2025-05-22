@@ -12,7 +12,7 @@ This file contains all the configurable content for the portfolio website. Simpl
   "email": "tankdarshan01@gmail.com",
   "location": "Bengaluru, India",
   "availability": "Remote & On-site",
-  "resumeUrl": "https://drive.google.com/file/d/1YuUWBOboEyf1O3LuO7polP2RB0r3JWdO/view?usp=sharing"
+  "resumeUrl": "https://drive.google.com/file/d/1FpxoHxiw-tU2o13SBXzOBSFA8kDhctCl/view?usp=sharing"
 }
 ```
 

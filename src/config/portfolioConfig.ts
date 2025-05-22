@@ -11,7 +11,7 @@ export const portfolioConfig = {
     email: "tankdarshan01@gmail.com",
     location: "Bengaluru, India",
     availability: "Remote & On-site",
-    resumeUrl: "https://drive.google.com/file/d/1YuUWBOboEyf1O3LuO7polP2RB0r3JWdO/view?usp=sharing"
+    resumeUrl: "https://drive.google.com/file/d/1FpxoHxiw-tU2o13SBXzOBSFA8kDhctCl/view?usp=sharing"
   },
 
   // Social Links
@@ -31,11 +31,7 @@ export const portfolioConfig = {
       url: "https://x.com/TankDarshan7",
       icon: "Twitter"
     },
-    {
-      platform: "Instagram",
-      url: "https://www.instagram.com/darshan_tank.01/",
-      icon: "Instagram"
-    },
+    
     {
       platform: "LeetCode",
       url: "https://leetcode.com/u/tankdarshan01/",
@@ -45,17 +41,22 @@ export const portfolioConfig = {
       platform: "Kaggle",
       url: "https://www.kaggle.com/darshantank2001",
       icon: "Kaggle"
+    },
+    {
+      platform: "Instagram",
+      url: "https://www.instagram.com/darshan_tank.01/",
+      icon: "Instagram"
     }
   ],
 
   // About Section
   about: {
     description: "I'm a passionate AI Engineer with expertise in machine learning, deep learning, and natural language processing. With a strong foundation in both theoretical concepts and practical applications, I develop innovative solutions that leverage the power of artificial intelligence to solve complex real-world problems and drive meaningful impact.",
-    experienceYears: "2.5+",
+    experienceYears: "3+",
     highlights: [
       {
         title: "AI Innovation",
-        description: "Pushing boundaries in machine learning and deep learning technologies",
+        description: "Built and delivered cutting-edge AI solutions leveraging advanced Generative AI techniques",
         icon: "Brain"
       },
       {
@@ -74,46 +75,46 @@ export const portfolioConfig = {
         icon: "Users"
       }
     ],
-    quickTechnologies: ["Python", "PyTorch", "TensorFlow", "LangChain", "RAG", "LLMs"]
+    quickTechnologies: ["Python", "PyTorch", "LlamaIndex", "LangChain", "LangGraph", "Azure", "Docker", "SQL"]
   },
 
   // Skills Section
-  skills: {
-    categories: [
-      {
-        title: "Programming & Tools",
-        description: "Python, C/C++, Flask, FastAPI, TensorFlow, PyTorch, Pandas, Numpy, nltk, Scikit-learn, Spacy, Transformers, Huggingface, Jupyter Notebook",
-        color: "from-blue-500 to-cyan-500",
-        icon: "Code",
-        items: ["Python", "C/C++", "Flask", "FastAPI", "TensorFlow", "PyTorch"]
-      },
-      {
-        title: "Machine Learning",
-        description: "Deep Learning, Neural Networks, LLM, OpenAI, Groq, RAG, LangChain, LangGraph, Prompt Engineering, CrewAI, AutoGen, LangGraph",
-        color: "from-purple-500 to-pink-500",
-        icon: "Brain",
-        items: ["Deep Learning", "RAG", "Langchain", "LangGraph", "Prompt Engineering", "LangChain"]
-      },
-      {
-        title: "Data & Databases",
-        description: "Pinecone, Qdrant, Redis, MongoDB, PostgreSQL, Vector Databases, Data Processing",
-        color: "from-green-500 to-emerald-500",
-        icon: "Database",
-        items: ["Pinecone", "Qdrant", "Redis", "MongoDB", "PostgreSQL", "Vector DBs"]
-      },
-      {
-        title: "ML in Production",
-        description: "Docker, Jenkins, Kibana, RabbitMQ, Git, AWS S3, DevOps, CI/CD",
-        color: "from-orange-500 to-red-500",
-        icon: "Network",
-        items: ["Docker", "Jenkins", "Kibana", "RabbitMQ", "Git", "AWS S3"]
-      }
-    ],
-    additionalTechnologies: [
-      "OpenAI", "Groq", "AutoGen", "LangGraph", "CrewAI", "Transformers",
-      "Hugging Face", "Scikit-learn", "Spacy", "NLTK", "Jupyter", "Git"
-    ]
-  },
+  // skills: {
+  //   categories: [
+  //     {
+  //       title: "Programming & Tools",
+  //       description: "Python, C/C++, Flask, FastAPI, TensorFlow, PyTorch, Pandas, Numpy, nltk, Scikit-learn, Spacy, Transformers, Huggingface, Jupyter Notebook",
+  //       color: "from-blue-500 to-cyan-500",
+  //       icon: "Code",
+  //       items: ["Python", "C/C++", "Flask", "FastAPI", "TensorFlow", "PyTorch"]
+  //     },
+  //     {
+  //       title: "Machine Learning",
+  //       description: "Deep Learning, Neural Networks, LLM, OpenAI, Groq, RAG, LangChain, LangGraph, Prompt Engineering, CrewAI, AutoGen, LangGraph",
+  //       color: "from-purple-500 to-pink-500",
+  //       icon: "Brain",
+  //       items: ["Deep Learning", "RAG", "Langchain", "LangGraph", "Prompt Engineering", "LangChain"]
+  //     },
+  //     {
+  //       title: "Data & Databases",
+  //       description: "Pinecone, Qdrant, Redis, MongoDB, PostgreSQL, Vector Databases, Data Processing",
+  //       color: "from-green-500 to-emerald-500",
+  //       icon: "Database",
+  //       items: ["Pinecone", "Qdrant", "Redis", "MongoDB", "PostgreSQL", "Vector DBs"]
+  //     },
+  //     {
+  //       title: "ML in Production",
+  //       description: "Docker, Jenkins, Kibana, RabbitMQ, Git, AWS S3, DevOps, CI/CD",
+  //       color: "from-orange-500 to-red-500",
+  //       icon: "Network",
+  //       items: ["Docker", "Jenkins", "Kibana", "RabbitMQ", "Git", "AWS S3"]
+  //     }
+  //   ],
+  //   additionalTechnologies: [
+  //     "OpenAI", "Groq", "AutoGen", "LangGraph", "CrewAI", "Transformers",
+  //     "Hugging Face", "Scikit-learn", "Spacy", "NLTK", "Jupyter", "Git"
+  //   ]
+  // },
 
   // Work Experience
   experience: {

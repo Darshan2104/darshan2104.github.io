@@ -91,7 +91,7 @@ export const Contact = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-white dark:text-gray-800 mb-4">
-            Let's <span className="text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Connect</span>
+            <span className="text-gradient bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent"> Let's Connect</span>
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-400 to-purple-400 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-200 dark:text-gray-800 max-w-3xl mx-auto">
@@ -105,8 +105,8 @@ export const Contact = () => {
             <div className="w-full animate-slide-up">
               <Card className="glass-effect dark:bg-white/90 border-white/20 dark:border-gray-300">
                 <CardContent className="p-8 md:p-12">
-                  <h3 className="text-2xl font-bold text-white dark:text-gray-800 mb-6 text-center">Get in Touch</h3>
-                  <p className="text-gray-200 dark:text-gray-800 mb-8 leading-relaxed text-center max-w-2xl mx-auto">
+                  <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-800 mb-6 text-center">Get in Touch</h3>
+                  <p className="text-gray-800 dark:text-gray-800 mb-8 leading-relaxed text-center max-w-2xl mx-auto">
                     I'm always excited to discuss new opportunities, innovative projects, and potential collaborations. 
                     Whether you're looking to implement AI solutions or need expert consultation, let's connect!
                   </p>
@@ -122,10 +122,10 @@ export const Contact = () => {
                           {info.icon}
                         </div>
                         <div>
-                          <p className="text-sm text-gray-300 dark:text-gray-600 mb-1">{info.label}</p>
+                          <p className="text-sm text-gray-900 dark:text-gray-600 mb-1">{info.label}</p>
                           <a 
                             href={info.href}
-                            className="text-white dark:text-gray-800 hover:text-blue-400 dark:hover:text-blue-600 transition-colors font-medium"
+                            className="text-gray-800 dark:text-gray-800 hover:text-blue-400 dark:hover:text-blue-600 transition-colors font-medium"
                           >
                             {info.value}
                           </a>
@@ -135,7 +135,7 @@ export const Contact = () => {
                   </div>
                   
                   <div className="border-t border-white/10 pt-8">
-                    <h4 className="text-lg font-semibold text-white mb-6 text-center">Follow Me</h4>
+                    <h4 className="text-lg font-semibold text-gray mb-6 text-center">Follow Me</h4>
                     <div className="flex flex-wrap justify-center gap-4">
                       {socialLinks.map((link, index) => (
                         <a

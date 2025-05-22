@@ -30,7 +30,8 @@ export const About = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-800 mb-4">
-            About <span className="text-gradient">Me</span>
+            About Me
+            {/* <span className="text-gradient">Me</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full"></div>
         </div>

@@ -14,15 +14,6 @@ const projects = [
     gradient: "from-blue-500 to-purple-600"
   },
   {
-    title: "News Summarization",
-    description: "Advanced abstractive text summarization research for large news datasets. Fine-tuned PEGASUS for Indian languages and optimized T5 models on Param Shavak supercomputer. Developed adapters reducing fine-tuning time by 75% without performance loss.",
-    technologies: ["PyTorch", "T5", "PEGASUS", "Hugging Face", "Adapter-Transformer"],
-    githubUrl: "https://github.com/yourusername/nlp-pipeline",
-    category: "NLP Research",
-    impact: "75% Time Reduction",
-    gradient: "from-green-500 to-teal-600"
-  },
-  {
     title: "MailSquad",
     description: "AI-powered email automation system leveraging LangChain, RAG, and LangGraph. Automatically classifies emails and generates context-aware responses using reference templates, significantly improving operational efficiency and scalability.",
     technologies: ["CrewAI", "LangChain", "RAG", "LangGraph", "Groq"],
@@ -32,11 +23,38 @@ const projects = [
     gradient: "from-purple-500 to-pink-600"
   },
   {
+    title: "News Summarization",
+    description: "Advanced abstractive text summarization research for large news datasets. Fine-tuned PEGASUS for Indian languages and optimized T5 models on Param Shavak supercomputer. Developed adapters reducing fine-tuning time by 75% without performance loss.",
+    technologies: ["PyTorch", "T5", "PEGASUS", "Hugging Face", "Adapter-Transformer"],
+    githubUrl: "https://github.com/Darshan2104/News-Summarization",
+    category: "NLP Research",
+    impact: "75% Time Reduction",
+    gradient: "from-green-500 to-teal-600"
+  },
+  {
+    title: "ThinkRAG",
+    description: "Interleaved Retrieval guided by Chain-of-Thought (IRCoT), which creates a dynamic feedback loop between information retrieval and reasoning processes.",
+    technologies: ["Python", "Groq", "pydantic"],
+    githubUrl: "https://github.com/Darshan2104/ThinkRAG",
+    category: "NLP Research",
+    impact: "Research Paper Implementation",
+    gradient: "from-green-500 to-teal-600"
+  },
+  {
+    title: "FusionRAG",
+    description: "RAG-Fusion improves RAG by creating multiple versions of a query, retrieving documents for each, and combining the results using Reciprocal Rank Fusion (RRF). The fused documents and all queries are then used to generate a better final answer.",
+    technologies: ["Python", "gemini ai", "pydantic"],
+    githubUrl: "https://github.com/Darshan2104/FusionRAG",
+    category: "NLP Research",
+    impact: "Research Paper Implementation",
+    gradient: "from-orange-500 to-red-600"
+  },
+  {
     title: "LLM-based Q&A System",
     description: "Comprehensive exploration of LLM-based question-answering systems. Implemented prompt-engineered contextual Q&A and RAG-based solutions with ChromaDB. Benchmarked various approaches for optimal results and latency performance.",
     technologies: ["OpenAI", "Llama-2", "LangChain", "VectorDB", "RAG", "Prompt Engineering"],
     githubUrl: "https://github.com/Darshan2104/LLM",
-    category: "RAG Systems",
+    category: "RAG Solution",
     impact: "Optimized Performance",
     gradient: "from-orange-500 to-red-600"
   },
@@ -52,7 +70,8 @@ export const Projects = () => {
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-            Featured <span className="text-gradient">Projects</span>
+            Featured Projects
+            {/* <span className="text-gradient">Projects</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">

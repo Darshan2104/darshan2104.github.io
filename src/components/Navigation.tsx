@@ -45,9 +45,9 @@ export const Navigation = () => {
             onClick={() => scrollToSection('#home')}
           >
             <span className={`transition-colors ${isScrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}>
-              {portfolioConfig.personal.name.split(' ')[0]}
+              {portfolioConfig.personal.name}
             </span>
-            <span className="text-gradient ml-1">{portfolioConfig.personal.name.split(' ')[1]}</span>
+            {/* <span className="text-gradient ml-1">{portfolioConfig.personal.name.split(' ')[1]}</span> */}
           </div>
 
           {/* Desktop Navigation */}
