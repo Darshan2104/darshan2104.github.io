@@ -135,7 +135,7 @@ export const Contact = () => {
                   </div>
                   
                   <div className="border-t border-white/10 pt-8">
-                    <h4 className="text-lg font-semibold text-gray mb-6 text-center">Follow Me</h4>
+                    <h4 className="text-lg font-semibold text-gray-800 mb-6 text-center">Follow Me</h4>
                     <div className="flex flex-wrap justify-center gap-4">
                       {socialLinks.map((link, index) => (
                         <a
@@ -143,7 +143,7 @@ export const Contact = () => {
                           href={link.href}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`group w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-white transition-all duration-300 hover:scale-110 hover:rotate-12 ${link.color} animate-fade-in`}
+                          className={`group w-12 h-12 rounded-full bg-white/10 border border-white/20 flex items-center justify-center text-gray-500 transition-all duration-300 hover:scale-110 hover:rotate-12 ${link.color} animate-fade-in`}
                           style={{ animationDelay: `${index * 0.1}s` }}
                           aria-label={link.label}
                         >

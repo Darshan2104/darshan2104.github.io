@@ -65,12 +65,12 @@ export const WorkExperience = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Work Experience
             {/* <span className="text-gradient">Experience</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
             Delivering measurable impact through innovative AI/ML solutions
           </p>
         </div>
@@ -104,7 +104,7 @@ export const WorkExperience = () => {
                               <Badge className={`bg-gradient-to-r ${experience.gradient} text-white border-0`}>
                                 {experience.type}
                               </Badge>
-                              <Badge variant="outline" className="bg-white/50">
+                              <Badge variant="outline" className="bg-gray-400">
                                 {experience.duration}
                               </Badge>
                             </div>

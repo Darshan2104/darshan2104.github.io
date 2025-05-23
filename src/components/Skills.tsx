@@ -41,12 +41,12 @@ export const Skills = () => {
       
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-16 animate-fade-in">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-gray-800 mb-4">
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4">
             Technical Skills 
             {/* <span className="text-gradient">Skills</span> */}
           </h2>
           <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto rounded-full mb-6"></div>
-          <p className="text-xl text-gray-600 dark:text-gray-700 max-w-3xl mx-auto">
+          <p className="text-xl text-gray-600 dark:text-white max-w-3xl mx-auto">
             Comprehensive expertise across the full AI/ML development lifecycle
           </p>
         </div>
@@ -96,7 +96,7 @@ export const Skills = () => {
         
         {/* Additional skills grid */}
         <div className="mt-16 max-w-5xl mx-auto">
-          <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-gray-800">Additional Technologies</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-900 dark:text-white">Additional Technologies</h3>
           <div className="flex flex-wrap justify-center gap-3">
             {[
               "OpenAI", "Groq", "AutoGen", "LangGraph", "CrewAI", "Transformers", 
