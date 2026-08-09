@@ -4,6 +4,7 @@ import {
   Brain,
   Database,
   Network,
+  Search,
   ChevronRight,
 } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolioConfig";
@@ -14,6 +15,7 @@ const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
   Brain,
   Database,
   Network,
+  Search,
 };
 
 const emojiMap: Record<string, string> = {
@@ -21,6 +23,7 @@ const emojiMap: Record<string, string> = {
   Brain: "🧠",
   Database: "🗄",
   Network: "🚀",
+  Search: "🔍",
 };
 
 function ExperienceToggle({

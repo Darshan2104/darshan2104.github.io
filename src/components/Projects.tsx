@@ -3,7 +3,7 @@ import { portfolioConfig } from "@/config/portfolioConfig";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export const Projects = () => {
-  const { projects, publications, blogs } = portfolioConfig;
+  const { projects, publications, blogs, personal } = portfolioConfig;
   const sectionRef = useScrollReveal();
 
   return (
@@ -170,6 +170,9 @@ export const Projects = () => {
         {/* Footer */}
         <p className="reveal text-center text-xs text-notion-secondary/60 mt-16">
           &copy; {new Date().getFullYear()} Darshan Tank
+        </p>
+        <p className="reveal text-center text-[11px] text-notion-secondary/50 mt-1">
+          Last updated on {personal.lastUpdated}
         </p>
     </div>
   );

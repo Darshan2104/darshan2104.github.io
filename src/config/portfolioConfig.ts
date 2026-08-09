@@ -7,12 +7,14 @@ export const portfolioConfig = {
   // Personal Information
   personal: {
     name: "Darshan Tank",
-    title: "AI Engineer & ML Specialist",
-    tagline: "Crafting intelligent solutions with AI & Machine Learning to transform ideas into reality",
-    email: "tankdarshan01@gmail.com",
+    title: "Applied AI Researcher — Agent Evaluation & Trace Analysis",
+    tagline: "Measuring, diagnosing, and improving production LLM agents",
+    email: "tankdarshan2022@gmail.com",
     location: "Bengaluru, India",
     availability: "Remote & On-site",
     resumeUrl: "https://drive.google.com/file/d/1FpxoHxiw-tU2o13SBXzOBSFA8kDhctCl/view?usp=sharing",
+    // Bump this by hand whenever the portfolio content changes.
+    lastUpdated: "Aug 9, 2026",
   },
 
   // Social Links
@@ -52,16 +54,16 @@ export const portfolioConfig = {
   // About Section
   about: {
     description:
-      "I'm a passionate AI Engineer with expertise in machine learning, deep learning, and natural language processing. With a strong foundation in both theoretical concepts and practical applications, I develop innovative solutions that leverage the power of artificial intelligence to solve complex real-world problems and drive meaningful impact.",
+      "I'm an applied AI researcher working on agent evaluation, agent trace analysis, and agent self-improvement for production LLM agents — LLM-as-Judge scoring, failure taxonomies built from trace-level error analysis, benchmark generation, and self-authored skill libraries that match frontier meta-skill creators at ~12× lower cost. I'm the author of CryptoAnalystBench (KDD 2026) and The Regression Tax. Before that I shipped production GenAI at Deloitte and Gnani.ai: RAG policy advisers, Text2SQL chatbots, and multilingual conversational agents.",
     experienceYears: "3+",
     quickTechnologies: [
       "Python",
-      "PyTorch",
-      "LlamaIndex",
-      "LangChain",
+      "Langfuse",
+      "LLM-as-Judge",
+      "Agent Evals",
       "LangGraph",
-      "Azure",
-      "Docker",
+      "LlamaIndex",
+      "PyTorch",
       "SQL",
     ],
   },
@@ -105,8 +107,22 @@ export const portfolioConfig = {
           "Prompt Engineering",
           "CrewAI",
           "AutoGen",
+          "MCP",
+          "LiteLLM",
+        ],
+      },
+      {
+        title: "Evaluation & Observability",
+        icon: "Search",
+        items: [
           "Langfuse",
           "Phoenix",
+          "LLM-as-Judge",
+          "Agent Trace Analysis",
+          "Error Taxonomies",
+          "Synthetic Data Generation",
+          "Benchmark Generation",
+          "Harbor",
         ],
       },
       {
@@ -145,34 +161,47 @@ export const portfolioConfig = {
     {
       title: "AI Data Analyst",
       company: "Sentient Labs",
-      location: "Remote",
-      period: "Sep 2025 - Current",
+      location: "Bengaluru, India",
+      period: "Sep 2025 - Present",
       type: "Full-time",
       description:
-        "Leading AI agent evaluation and benchmarking research, developing frameworks to systematically assess LLM capabilities in complex multi-tool scenarios.",
+        "Evaluation, trace analysis, and self-improvement for CryptoAgent (SERA), Sentient's multi-tool crypto research agent — building the benchmarks, judges, and observability that tell us where the agent actually fails and which fixes are worth making.",
       achievements: [
-        "Published CryptoAnalystBench paper on arXiv — a benchmark for identifying failure modes in LLMs integrating outputs from multiple tools",
-        "Designed evaluation frameworks for multi-step agent reasoning across retrieval, generation, and tool-use stages",
-        "Developed systematic error taxonomies for characterizing agent failures in high-volume, time-sensitive data processing",
-        "Contributed to agent benchmarking infrastructure used across research teams",
+        "Built the evaluation benchmark for CryptoAgent (SERA) by mining and curating real production queries into an evaluation set that reflects what users actually ask rather than synthetic proxies",
+        "Built the LLM-as-Judge evaluation setup on Langfuse — instrumented production agents for trace management (nested spans across tool calls, retrievals, and LLM generations, session attribution, per-run token, cost, and latency accounting), then defined the evaluation parameters and scoring methods used to judge long-form, multi-tool analyst responses; those scores drove the prompt, tool, and model changes that improved the agent",
+        "Ran systematic error analysis and discovery across production traces, coding recurring failures into a reusable taxonomy and quantifying how often each mode fires to rank fixes by expected impact rather than intuition",
+        "Built an open-source meta-skill creator for agent self-improvement — swapped the benchmark-rerun loop for single-pass self-critique plus discover-before-create, authoring skill libraries ~12× cheaper and 5× faster ($112 → $9) while matching frontier creators on downstream task success; published as The Regression Tax",
+        "Generated synthetic data and use-case-specific benchmarks covering long-tail scenarios that production traffic never exercises — the basis for CryptoAnalystBench",
       ],
-      technologies: ["Python", "LLM Evaluation", "Agent Benchmarking", "Langfuse", "Phoenix"],
+      technologies: [
+        "Langfuse",
+        "LLM-as-Judge",
+        "Agent Trace Analysis",
+        "Error Taxonomies",
+        "Agent Self-Improvement",
+        "Benchmark Generation",
+      ],
     },
     {
-      title: "Consultant GenAI",
+      title: "GenAI Consultant",
       company: "Deloitte",
       location: "Bengaluru, India",
       period: "Feb 2025 - Aug 2025",
       type: "Full-time",
       description:
-        "Built and deployed Agentic RAG Chatbot on Tourist Policy Documents",
+        "Built and shipped production GenAI for enterprise clients — retrieval over legal and compliance data, and natural-language analytics over procurement databases.",
       achievements: [
-        "Designed and deployed Gen-AI RAG pipeline for real-time Conversation on Tourist Policy Documents",
-        "It helped with information retrieval and document summarization",
-        "It guides the user for drafting new policies and provides suggestions for improvement",
-        "It helped to compare different policies for better decision making",
+        "Developed a Policy Adviser RAG solution for conflict checks using LlamaIndex, GPT-4o, and Azure AI Search, enabling fast, context-aware retrieval over legal and compliance data",
+        "Built a Text2SQL-powered chatbot for Unilever's Procurement team, integrated with Microsoft Teams — natural language queries with auto-generated SQL execution and visual plots, cutting manual query effort by 60%",
       ],
-      technologies: ["LlamaIndex", "GPT-4o", "Azure AI Search", "SQL"],
+      technologies: [
+        "LlamaIndex",
+        "GPT-4o",
+        "Azure AI Search",
+        "Text2SQL",
+        "Microsoft Teams",
+        "SQL",
+      ],
     },
     {
       title: "Senior NLP Engineer",
@@ -181,20 +210,18 @@ export const portfolioConfig = {
       period: "May 2024 - Jan 2025",
       type: "Full-time",
       description:
-        "Led advanced call center analytics and Gen-AI solutions, analyzing conversations to enhance agent performance through insights, feedback systems, and script adherence monitoring using COT+Feedback prompting techniques.",
+        "Led call center analytics and GenAI solutions — mining ASR-transcribed conversations for agent performance insights, and shipping large-scale classification pipelines into production.",
       achievements: [
-        "Designed and deployed Gen-AI RAG pipeline for real-time email classification across 150+ categories",
-        "Achieved 66% reduction in manpower and 115% accuracy improvement (39% to 84%)",
-        "Integrated XGBoost and GPT-4-mini in robust ensemble model",
-        "Conducted sentiment analysis, agent scoring, and call auditing for efficiency optimization",
+        "Built an automated pipeline for analyzing customer service representative (CSR) conversations over ASR-transcribed text, extracting customer sentiment, interaction summaries, positive/negative keywords, feedback scores, CSR scoring, and script adherence using GPT-4o-mini and CoT prompting",
+        "Designed, developed, and deployed a real-time multiclass email classification pipeline across 150+ categories, using the HNSW algorithm over Qdrant to narrow the search space",
       ],
       technologies: [
-        "GPT-4",
-        "RAG",
-        "XGBoost",
-        "NLP",
+        "GPT-4o-mini",
+        "CoT Prompting",
+        "Qdrant",
+        "HNSW",
+        "ASR",
         "Sentiment Analysis",
-        "Gen-AI",
       ],
     },
     {
@@ -206,9 +233,8 @@ export const portfolioConfig = {
       description:
         "Developed multilingual conversational AI systems and no-code/low-code platforms, leveraging deep learning models to create advanced chatbot and voice bot solutions for diverse client needs.",
       achievements: [
-        "Achieved 50% reduction in agent costs for Indian and US clients",
+        "Led multilingual conversational systems for Indian and US clients — 50% reduction in agent costs and 12% success rate — using paraphrase augmentation, duckling entity recognition, and intent classification",
         "Developed no-code/low-code conversational AI platforms reducing bot development time by 60%",
-        "Implemented advanced NLP techniques: paraphrasing, entity recognition, intent classification",
         "Contributed to innovative POCs including LLM-based voice bots",
       ],
       technologies: [
@@ -224,6 +250,47 @@ export const portfolioConfig = {
 
   // Projects
   projects: [
+    {
+      title: "Garuda-openagent — Agent Harness",
+      description:
+        "Provider-agnostic agent harness that does what OpenCode does — any LLM against real environments with bash/file/edit/tmux/MCP tools, session persistence, context compaction — at better latency.",
+      technologies: ["Python", "MCP", "LiteLLM", "Agent Harness"],
+      githubUrl: "https://github.com/Darshan2104/Garuda-openagent",
+      category: "AI Agents",
+      impact: "Provider-Agnostic Harness",
+    },
+    {
+      title: "Meta-Skill Creator",
+      description:
+        "Open-source meta-skill creator for agent self-improvement. Swaps the benchmark-rerun loop for single-pass self-critique plus discover-before-create, authoring skill libraries ~12× cheaper and 5× faster ($112 → $9) while matching frontier creators on downstream task success. Published as The Regression Tax.",
+      technologies: [
+        "Agent Self-Improvement",
+        "Skill Libraries",
+        "LLM Agents",
+        "Python",
+      ],
+      githubUrl: "https://github.com/sentient-agi/meta-skill-creator",
+      category: "AI Agents",
+      impact: "12× Cheaper, 5× Faster",
+    },
+    {
+      title: "RAGent",
+      description:
+        "Implementations of ideas from research papers — Corrective RAG, Self-RAG, and Adaptive RAG — built with LangGraph and LangChain.",
+      technologies: ["LangGraph", "LangChain", "RAG", "Python"],
+      githubUrl: "https://github.com/Darshan2104/RAGent",
+      category: "NLP Research",
+      impact: "Research Paper Implementation",
+    },
+    {
+      title: "Max Health Companion",
+      description:
+        "Contributed a personalized disease recommendation engine (symptom inputs + user profiles) to a caregiver-facing health tracking app.",
+      technologies: ["Python", "Recommendation Engine", "Expo"],
+      githubUrl: "https://max-health-companion.expo.app/",
+      category: "Applied ML",
+      impact: "Shipped Product",
+    },
     {
       title: "Deep Learning - Work & Projects",
       description:
@@ -297,11 +364,19 @@ export const portfolioConfig = {
   publications: [
     {
       title: "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
-      venue: "arXiv",
+      venue: "KDD 2026",
       year: "2026",
-      url: "https://arxiv.org/abs/2602.11304",
+      url: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817585",
       description:
         "A benchmark and evaluation framework to identify failure modes in LLMs integrating outputs from multiple tools while processing high-volume, time-sensitive cryptocurrency data.",
+    },
+    {
+      title: "The Regression Tax: Decomposing Why Skills Help and Hurt LLM Agents",
+      venue: "Preprint",
+      year: "2026",
+      url: "https://arxiv.org/abs/2607.22520",
+      description:
+        "Decomposes the net effect of adding skills to an LLM agent — separating where a skill genuinely helps from where it regresses behaviour the agent already handled, and why. Introduces a meta-skill creator that authors skill libraries ~12× cheaper and 5× faster while matching frontier creators on downstream task success.",
     },
   ],
 
