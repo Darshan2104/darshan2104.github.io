@@ -136,6 +136,8 @@ This file contains all the configurable content for the portfolio website. Simpl
     {
       "title": "Senior NLP Engineer",
       "company": "Gnani.ai",
+      "logo": "/logos/gnani.svg",
+      "logoClass": "h-5",
       "location": "Bengaluru, India",
       "period": "May 2024 - Jan 2025",
       "duration": "9 months",

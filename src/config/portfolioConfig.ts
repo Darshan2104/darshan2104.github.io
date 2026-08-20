@@ -161,6 +161,8 @@ export const portfolioConfig = {
     {
       title: "AI Data Analyst",
       company: "Sentient Labs",
+      logo: "/logos/sentient.svg",
+      logoClass: "h-3.5",
       location: "Bengaluru, India",
       period: "Sep 2025 - Present",
       type: "Full-time",
@@ -185,6 +187,8 @@ export const portfolioConfig = {
     {
       title: "GenAI Consultant",
       company: "Deloitte",
+      logo: "/logos/deloitte.svg",
+      logoClass: "h-3.5",
       location: "Bengaluru, India",
       period: "Feb 2025 - Aug 2025",
       type: "Full-time",
@@ -206,6 +210,8 @@ export const portfolioConfig = {
     {
       title: "Senior NLP Engineer",
       company: "Gnani.ai",
+      logo: "/logos/gnani.svg",
+      logoClass: "h-5",
       location: "Bengaluru, India",
       period: "May 2024 - Jan 2025",
       type: "Full-time",
@@ -227,6 +233,8 @@ export const portfolioConfig = {
     {
       title: "NLP Engineer",
       company: "Gnani.ai",
+      logo: "/logos/gnani.svg",
+      logoClass: "h-5",
       location: "Bengaluru, India",
       period: "Sep 2022 - Apr 2024",
       type: "Full-time",
@@ -366,7 +374,7 @@ export const portfolioConfig = {
       title: "CryptoAnalystBench: Failures in Multi-Tool Long-Form LLM Analysis",
       venue: "KDD 2026",
       year: "2026",
-      url: "https://dl.acm.org/doi/epdf/10.1145/3770855.3817585",
+      url: "https://dl.acm.org/doi/10.1145/3770855.3817585",
       description:
         "A benchmark and evaluation framework to identify failure modes in LLMs integrating outputs from multiple tools while processing high-volume, time-sensitive cryptocurrency data.",
     },

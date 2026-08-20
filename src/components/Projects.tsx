@@ -3,14 +3,79 @@ import { portfolioConfig } from "@/config/portfolioConfig";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 export const Projects = () => {
-  const { projects, publications, blogs, personal } = portfolioConfig;
+  const { projects, publications, blogs, personal, skills } = portfolioConfig;
   const sectionRef = useScrollReveal();
 
   return (
     <div className="py-20 bg-notion-gray/50" ref={sectionRef}>
       <div className="container mx-auto px-4 max-w-2xl">
+        {/* Publications */}
+        {publications.length > 0 && (
+          <>
+            <h2 className="reveal text-2xl font-bold text-notion-text mb-2">
+              <span className="emoji-bounce inline-block mr-2">📄</span>
+              Publications
+            </h2>
+            <div className="space-y-0 mb-16 stagger">
+              {publications.map((pub, index) => (
+                <div
+                  key={index}
+                  className={`reveal py-4 ${index !== publications.length - 1 ? "border-b border-notion-border" : ""}`}
+                >
+                  <div className="flex items-start gap-2">
+                    <FileText className="w-4 h-4 text-notion-secondary mt-0.5 flex-shrink-0" />
+                    <div>
+                      <a
+                        href={pub.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="link-underline font-semibold text-sm text-notion-text"
+                      >
+                        {pub.title}
+                      </a>
+                      <p className="text-sm text-notion-secondary">
+                        {pub.venue} &middot; {pub.year}
+                      </p>
+                      {pub.description && (
+                        <p className="text-sm text-notion-secondary mt-1">
+                          {pub.description}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </>
+        )}
+
+        {/* Technical Skills */}
+        <h2 className="reveal text-2xl font-bold text-notion-text mb-2 mt-8">
+          <span className="emoji-bounce inline-block mr-2">⚡</span>
+          Technical Skills
+        </h2>
+        <div className="space-y-5 mb-16 stagger">
+          {skills.categories.map((category) => (
+            <div key={category.title} className="reveal">
+              <h3 className="text-sm font-semibold text-notion-text mb-2">
+                {category.title}
+              </h3>
+              <div className="flex flex-wrap gap-1.5">
+                {category.items.map((item) => (
+                  <span
+                    key={item}
+                    className="tag-pill px-2 py-0.5 text-xs text-notion-secondary bg-notion-gray border border-notion-border rounded"
+                  >
+                    {item}
+                  </span>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+
         {/* Projects — Notion gallery view */}
-        <h2 className="reveal text-2xl font-bold text-notion-text mb-2">
+        <h2 className="reveal text-2xl font-bold text-notion-text mb-2 mt-8">
           <span className="emoji-bounce inline-block mr-2">🧪</span>
           Projects
         </h2>
@@ -73,46 +138,6 @@ export const Projects = () => {
             <ExternalLink className="w-3 h-3" />
           </a>
         </div>
-
-        {/* Publications */}
-        {publications.length > 0 && (
-          <>
-            <h2 className="reveal text-2xl font-bold text-notion-text mb-2 mt-8">
-              <span className="emoji-bounce inline-block mr-2">📄</span>
-              Publications
-            </h2>
-            <div className="space-y-0 mb-16 stagger">
-              {publications.map((pub, index) => (
-                <div
-                  key={index}
-                  className={`reveal py-4 ${index !== publications.length - 1 ? "border-b border-notion-border" : ""}`}
-                >
-                  <div className="flex items-start gap-2">
-                    <FileText className="w-4 h-4 text-notion-secondary mt-0.5 flex-shrink-0" />
-                    <div>
-                      <a
-                        href={pub.url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="link-underline font-semibold text-sm text-notion-text"
-                      >
-                        {pub.title}
-                      </a>
-                      <p className="text-sm text-notion-secondary">
-                        {pub.venue} &middot; {pub.year}
-                      </p>
-                      {pub.description && (
-                        <p className="text-sm text-notion-secondary mt-1">
-                          {pub.description}
-                        </p>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </>
-        )}
 
         {/* Blogs */}
         {blogs.length > 0 && (

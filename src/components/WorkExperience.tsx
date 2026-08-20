@@ -1,35 +1,12 @@
 import { useState } from "react";
-import {
-  Code,
-  Brain,
-  Database,
-  Network,
-  Search,
-  ChevronRight,
-} from "lucide-react";
+import { ChevronRight } from "lucide-react";
 import { portfolioConfig } from "@/config/portfolioConfig";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
-
-const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
-  Code,
-  Brain,
-  Database,
-  Network,
-  Search,
-};
-
-const emojiMap: Record<string, string> = {
-  Code: "🛠",
-  Brain: "🧠",
-  Database: "🗄",
-  Network: "🚀",
-  Search: "🔍",
-};
 
 function ExperienceToggle({
   exp,
 }: {
-  exp: (typeof portfolioConfig.experience)[0];
+  exp: (typeof portfolioConfig.experience)[number];
 }) {
   const [open, setOpen] = useState(false);
 
@@ -51,9 +28,19 @@ function ExperienceToggle({
               {exp.period}
             </span>
           </div>
-          <p className="text-sm text-notion-secondary">
-            {exp.company} &middot; {exp.location}
-          </p>
+          <div className="flex items-center gap-2">
+            {"logo" in exp && exp.logo && (
+              <img
+                src={exp.logo}
+                alt={`${exp.company} logo`}
+                loading="lazy"
+                className={`${exp.logoClass ?? "h-3.5"} w-auto max-w-[110px] object-contain flex-shrink-0`}
+              />
+            )}
+            <p className="text-sm text-notion-secondary">
+              {exp.company} &middot; {exp.location}
+            </p>
+          </div>
         </div>
       </button>
 
@@ -91,45 +78,12 @@ function ExperienceToggle({
 }
 
 export const WorkExperience = () => {
-  const { skills, experience } = portfolioConfig;
+  const { experience } = portfolioConfig;
   const sectionRef = useScrollReveal();
 
   return (
-    <div className="py-20" ref={sectionRef}>
+    <div className="py-14" ref={sectionRef}>
       <div className="container mx-auto px-4 max-w-2xl">
-        {/* Skills — Notion callout blocks with emojis */}
-        <h2 className="reveal text-2xl font-bold text-notion-text mb-2">
-          <span className="emoji-bounce inline-block mr-2">⚡</span>
-          Technical Skills
-        </h2>
-        <p className="reveal text-sm text-notion-secondary mb-6">
-          Core technologies and frameworks I work with daily.
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-20 stagger">
-          {skills.categories.map((category) => {
-            const emoji = emojiMap[category.icon] || "📦";
-            return (
-              <div
-                key={category.title}
-                className="reveal callout-hover p-4 bg-notion-gray rounded border border-transparent cursor-default"
-              >
-                <div className="flex items-start gap-3">
-                  <span className="text-lg select-none mt-0.5">{emoji}</span>
-                  <div>
-                    <h3 className="font-semibold text-sm text-notion-text mb-1">
-                      {category.title}
-                    </h3>
-                    <p className="text-sm text-notion-secondary leading-relaxed">
-                      {category.items.join("  ·  ")}
-                    </p>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-
         {/* Experience — Notion toggle blocks */}
         <h2 className="reveal text-2xl font-bold text-notion-text mb-2">
           <span className="emoji-bounce inline-block mr-2">💼</span>
